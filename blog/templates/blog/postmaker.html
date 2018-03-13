@@ -1,0 +1,26 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+
+<h2 class="text_container"> {{ text }}</h2>
+<div class="wrapper">
+  <div class="image_container">
+    <img class ="image" src= {{ link }} >
+  </div>
+  <div class="buttons">
+    <form method="GET" name="prev">
+      <button class="left_btn" name="prev" type="submit" value={{page}}> PREV</button>
+    </form>
+    <form method="GET" name="next">
+      <button class="right_btn" name="next" type="submit" value={{page}}> NEXT</button>
+    </form>
+    <form method="GET" name="make_post">
+      <button class="middle_btn" name="make_post" type="submit" value={{page}}>POST</button>
+    </form>
+  </div>
+  <h2 class="text_container"> {{ response }}</h2>
+
+</div>
+<br>{{ page }}</br>
+
+{% endblock %}
